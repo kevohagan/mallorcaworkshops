@@ -1,0 +1,66 @@
+<template name='profile'>
+  <div id="profile">
+    <div class="container">
+      <div class="row">
+        <!-- Button trigger modal -->
+          <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+            Edit Profile
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="myModalLabel">Edit Profile</h4>
+                </div>
+                <div class="modal-body">
+                 <div class="form-group">
+                      <input class="form-control" type="email" id="email" placeholder="Email" value="{{email}}"></input>
+                      <span class='errors'></span>
+                    </div>
+                    <div class="form-group">
+                      <input class="form-control" type="text" id="firstName" placeholder="First Name" value="{{firstName}}"></input>
+                      <span class='errors'></span>
+                    </div>
+                    <div class="form-group">
+                      <input class="form-control" type="text" id="lastName" placeholder="Last Name" value="{{lastName}}"></input>
+                      <span class='errors'></span>
+                    </div>
+                    <hr />
+                    <div class="form-group">
+                      <input class="form-control" type="text" id="organization" placeholder="Organization (optional)" value="{{organization}}"></input>
+                    </div>
+                    <div class="form-group">
+                      <input class="form-control" type="text" id="location" placeholder="Location (optional)" value="{{location}}"></input>
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form-control" type="text" id="bio" placeholder="Bio (optional)">{{bio}}</textarea>
+                    </div>
+                    <div class="form-group">
+                      <input class="form-control" type="text" id="url" placeholder="URL (optional)" value="{{url}}"></input>
+                    </div>
+                    <div class="form-group">
+                      <input class="form-control" type="text" id="googlePlusUrl" placeholder="Google Plus URL (optional)" value="{{googlePlusUrl}}"></input>
+                    </div>
+                    <div class="form-group">
+                      <input class="form-control" type="text" id="twitterHandle" placeholder="Twitter Handle (optional)" value="{{twitterHandle}}"></input>
+                    </div>
+                    <a class='btn btn-primary done'><i class='icon-ok'></i> done</a>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+        
+        
+
+
+      </div>
+    </div>
+  </div>
+</template>

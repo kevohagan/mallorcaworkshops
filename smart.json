@@ -1,0 +1,9 @@
+{
+  "packages": {
+    "iron-router": {},
+    "accounts-entry": {},
+    "blog": {},
+    "handlebar-helpers": {},
+    "gravatar": {}
+  }
+}

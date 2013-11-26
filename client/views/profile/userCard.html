@@ -1,0 +1,16 @@
+<template name='userCard'>
+    <div class="media">
+        <a class="pull-left" href="#">
+            <img class="media-object dp img-circle" src='{{gravatarimg}}' >
+        </a>
+        <div class="media-body">
+            <h4>{{name}}</h4>
+            <h5>{{subhead}}</h5>
+            <p>{{bio}}</p>
+            <hr style="margin:8px auto">
+
+          <span class="label"><a href='http://twitter.com/{{twitterHandle}}'>@{{twitterHandle}}</a></span>
+          <span class="label"><a href='{{googlePlusUrl}}'>{{googlePlusUrl}}</a></span>
+        </div>
+    </div>
+</template>
