@@ -7,7 +7,8 @@
       "blog": {},
       "handlebar-helpers": {},
       "gravatar": {},
-      "roles": {}
+      "roles": {},
+      "nprogress": {}
     },
     "packages": {
       "iron-router": {
@@ -39,6 +40,11 @@
         "git": "https://github.com/alanning/meteor-roles.git",
         "tag": "v1.0.6",
         "commit": "f81cbf7c765a4ed7e16a580c288db6f10a90856b"
+      },
+      "nprogress": {
+        "git": "https://github.com/zhouzhuojie/meteor-nprogress.git",
+        "tag": "v0.0.3",
+        "commit": "ffd1c5dd400af64121197f4e637a215c4b6b1fc7"
       },
       "parsleyjs": {
         "git": "https://github.com/nate-strauser/meteor-parsleyjs.git",
