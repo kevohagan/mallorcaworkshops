@@ -12,13 +12,13 @@ Accounts.onCreateUser(function(options, user){
 
   if (options.email)
     user.profile.email = options.email;
-    
+
   if (getEmail(user))
     user.email_hash = getEmailHash(user);
-  
+
   if (!user.profile.name)
     user.profile.name = user.username;
-  
+
   // set notifications default preferences
   user.profile.notifications = {
     users: false,
@@ -33,11 +33,11 @@ Accounts.onCreateUser(function(options, user){
   // if this is the first user ever, make them an admin
   if (!Meteor.users.find().count() )
     user.isAdmin = true;
-  
+
   //create roles for user
-  
-  user.roles = [];
-  
+
+  user.roles = "user";
+
   // if (Meteor.user().emails[0].address === 'kevinohagan@gmail.com') user.isAdmin = true;
 
   // give new users a few invites (default to 3)
@@ -84,9 +84,9 @@ addToMailChimpList = function(user){
       throw 'User must have an email address';
 
     console.log('adding "'+email+'" to MailChimp list…');
-    
+
     var mailChimp = new MailChimpAPI(MAILCHIMP_API_KEY, { version : '1.3', secure : false });
-    
+
     mailChimp.listSubscribe({
       id: MAILCHIMP_LIST_ID,
       email_address: email,
