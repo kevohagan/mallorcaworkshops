@@ -15,4 +15,4 @@ Template.userCard.helpers
   url: -> @profile.url
   googlePlusUrl: -> @profile.googlePlusUrl
   twitterHandle: -> @profile.twitterHandle
-  gravatarimg: -> Gravatar.imageUrl(Meteor.user().emails[0].address, {s:'80',d:'http://mallorcaworkshops.org.s3.amazonaws.com/gears.png'})
+  gravatarimg: -> Gravatar.imageUrl(Meteor.user().emails[0].address, {s:'150',d:'http://mallorcaworkshops.org.s3.amazonaws.com/gears.png'})
