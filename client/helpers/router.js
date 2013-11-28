@@ -38,7 +38,7 @@ var filters = {
     if (!(Meteor.loggingIn() || Meteor.user())) {
       // throwError('Please Sign In First.')
       console.log("not logged in");
-      this.render('problem404');
+      this.render('not_logged_in');
       this.stop();
     }
   },
@@ -49,14 +49,6 @@ var filters = {
       this.stop();
     }
   },
-
-  // isAdmin: function() {
-  //   if(!Meteor.loggingIn() && Session.get('settingsLoaded') && !isAdmin()){
-  //     throwError(i18n.t("Sorry, you  have to be an admin to view this page."))
-  //     this.render('no_rights');
-  //     this.stop();
-  //   }
-  // },
 
   // canView: function() {
   //   if(Session.get('settingsLoaded') && !canView()){
@@ -108,17 +100,13 @@ var filters = {
     } else {
       this.render();
     }
-    // if ( user && Roles.userIsInRole(user, ['admin'])) {
-    //  this.render();
-    // } else {
-    //   this.render('problem404');
-    // }
+
   }
 
 }
 
-Router.before(filters.userIsAdmin, {only: ['admin','example']});
-
+Router.before(filters.userIsAdmin, {only: ['admin']});
+Router.before(filters.isLoggedIn,{except: ['home','entrySignIn','entrySignUp','entryResetPassword','entryForgotPassword','blogIndex','blogShow']});
 
 
 Router.map(function() {
@@ -129,7 +117,6 @@ Router.map(function() {
 
   this.route('example', {
     path:'/example',
-    before:[filters.isLoggedIn]
   });
 
   this.route('dashboard', {

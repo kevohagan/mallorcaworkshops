@@ -1,0 +1,16 @@
+<template name="not_logged_in">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="error-template">
+                    <h1> You're not logged in</h1>
+                    <h2> You need to be a user to be able to see this page </h2>
+                    <div class="error-actions">
+                        <a href="{{pathFor 'entrySignIn'}}" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span> Sign In</a>
+                        <a href="{{pathFor 'home'}}" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-envelope"></span>Go Back </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
