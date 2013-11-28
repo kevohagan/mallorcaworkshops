@@ -50,13 +50,13 @@ var filters = {
     }
   },
 
-  isAdmin: function() {
-    if(!Meteor.loggingIn() && Session.get('settingsLoaded') && !isAdmin()){
-      throwError(i18n.t("Sorry, you  have to be an admin to view this page."))
-      this.render('no_rights');
-      this.stop();
-    }
-  },
+  // isAdmin: function() {
+  //   if(!Meteor.loggingIn() && Session.get('settingsLoaded') && !isAdmin()){
+  //     throwError(i18n.t("Sorry, you  have to be an admin to view this page."))
+  //     this.render('no_rights');
+  //     this.stop();
+  //   }
+  // },
 
   // canView: function() {
   //   if(Session.get('settingsLoaded') && !canView()){
@@ -102,11 +102,17 @@ var filters = {
 
   userIsAdmin: function() {
     var user = Meteor.user();
-    if ( Roles.userIsInRole(user, ['admin'])) {
-     this.render();
+    if (isAdmin(user) === false) {
+        this.render('no_rights');
+        this.stop();
     } else {
-      this.render('problem404');
+      this.render();
     }
+    // if ( user && Roles.userIsInRole(user, ['admin'])) {
+    //  this.render();
+    // } else {
+    //   this.render('problem404');
+    // }
   }
 
 }
@@ -132,6 +138,8 @@ Router.map(function() {
           return Meteor.user();
           }
   });
+
+  this.route('admin');
 
 
 });
