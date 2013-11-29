@@ -8,7 +8,9 @@
       "handlebar-helpers": {},
       "gravatar": {},
       "roles": {},
-      "nprogress": {}
+      "nprogress": {},
+      "medium-editor": {},
+      "impicker": {}
     },
     "packages": {
       "iron-router": {
@@ -45,6 +47,16 @@
         "git": "https://github.com/zhouzhuojie/meteor-nprogress.git",
         "tag": "v0.0.3",
         "commit": "ffd1c5dd400af64121197f4e637a215c4b6b1fc7"
+      },
+      "medium-editor": {
+        "git": "https://github.com/DenisGorbachev/medium-editor.git",
+        "tag": "v1.1.2",
+        "commit": "46bc982ba7824b4ecdb67b13ff6c54f9e96963cd"
+      },
+      "impicker": {
+        "git": "https://github.com/wulx/impicker.git",
+        "tag": "v1.1.2",
+        "commit": "26f1b4a6ed8f90762c699ad845264ff1065e8ebb"
       },
       "parsleyjs": {
         "git": "https://github.com/nate-strauser/meteor-parsleyjs.git",

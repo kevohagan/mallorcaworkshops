@@ -6,6 +6,8 @@
     "handlebar-helpers": {},
     "gravatar": {},
     "roles": {},
-    "nprogress": {}
+    "nprogress": {},
+    "medium-editor": {},
+    "impicker": {}
   }
 }

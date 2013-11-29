@@ -109,6 +109,12 @@ Router.before(filters.userIsAdmin, {only: ['admin']});
 Router.before(filters.isLoggedIn,{except: ['home','entrySignIn','entrySignUp','entryResetPassword','entryForgotPassword','blogIndex','blogShow']});
 
 
+
+
+
+// Maps
+
+
 Router.map(function() {
 
   this.route('home', {
@@ -127,6 +133,36 @@ Router.map(function() {
   });
 
   this.route('admin');
+
+
+
+    //Users
+
+  this.route('all-users', {
+    path: '/all-users/',
+    template: 'all_users',
+    waitOn: function() {
+      var limit = parseInt(this.params.limit) || 20;
+      return Meteor.subscribe('allUsersAdmin');
+    },
+    data: function() {
+      var limit = parseInt(this.params.limit) || 20,
+          parameters = getUsersParameters(this.params.filterBy, this.params.sortBy, limit),
+          filterBy = (typeof this.params.filterBy === 'string') ? this.params.filterBy : 'all',
+          sortBy = (typeof this.params.sortBy === 'string') ? this.params.sortBy : 'createdAt';
+      Session.set('usersLimit', limit);
+      return {
+        users: Meteor.users.find(parameters.find, parameters.options),
+        filterBy: filterBy,
+        sortBy: sortBy
+      }
+
+      // return  {
+      //   users: Meteor.users.find().fetch()
+      // }
+    }
+  });
+
 
 
 });

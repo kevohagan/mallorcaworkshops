@@ -1,12 +1,12 @@
 Accounts.onCreateUser(function(options, user){
   var userProperties = {
-    profile: options.profile || {},
     karma: 0,
     isInvited: false,
     isAdmin: false,
     postCount: 0,
     commentCount: 0,
-    invitedCount: 0
+    invitedCount: 0,
+    profile: options.profile || {},
   }
   user = _.extend(user, userProperties);
 
@@ -31,14 +31,13 @@ Accounts.onCreateUser(function(options, user){
   user.slug = slugify(getUserName(user));
 
   // if this is the first user ever, make them an admin
-  if (!Meteor.users.find().count() )
-    user.isAdmin = true;
+  // if (!Meteor.users.find().count() )
+  //   user.isAdmin = true;
 
   //create roles for user
 
   user.roles = "user";
 
-  // if (Meteor.user().emails[0].address === 'kevinohagan@gmail.com') user.isAdmin = true;
 
   // give new users a few invites (default to 3)
   user.inviteCount = getSetting('startInvitesCount', 3);
@@ -46,24 +45,24 @@ Accounts.onCreateUser(function(options, user){
   // trackEvent('new user', {username: user.username, email: user.profile.email});
 
   // if user has already filled in their email, add them to MailChimp list
-  if(user.profile.email)
-    addToMailChimpList(user);
+  // if(user.profile.email)
+  //   addToMailChimpList(user);
 
   // send notifications to admins
-  var admins = Meteor.users.find({isAdmin: true});
-  admins.forEach(function(admin){
-    if(getUserSetting('notifications.users', false, admin)){
-      var notification = getNotificationContents({
-        event: 'newUser',
-        properties: {
-          username: getUserName(user),
-          profileUrl: getProfileUrl(user)
-        },
-        userId: admin._id
-      }, 'email');
-      sendNotification(notification, admin);
-    }
-  });
+  // var admins = Meteor.users.find({isAdmin: true});
+  // admins.forEach(function(admin){
+  //   if(getUserSetting('notifications.users', false, admin)){
+  //     var notification = getNotificationContents({
+  //       event: 'newUser',
+  //       properties: {
+  //         username: getUserName(user),
+  //         profileUrl: getProfileUrl(user)
+  //       },
+  //       userId: admin._id
+  //     }, 'email');
+  //     sendNotification(notification, admin);
+  //   }
+  // });
 
 
   return user;
