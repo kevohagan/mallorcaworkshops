@@ -40,7 +40,7 @@ Accounts.onCreateUser(function(options, user){
 
 
   // give new users a few invites (default to 3)
-  user.inviteCount = getSetting('startInvitesCount', 3);
+  // user.inviteCount = getSetting('startInvitesCount', 3);
 
   // trackEvent('new user', {username: user.username, email: user.profile.email});
 
@@ -66,6 +66,12 @@ Accounts.onCreateUser(function(options, user){
 
 
   return user;
+});
+
+Accounts.validateNewUser(function (user) {
+  if (user.username && user.username.length >= 3)
+    return true;
+  throw new Meteor.Error(403, "Username must have at least 3 characters");
 });
 
 getEmailHash = function(user){

@@ -31,18 +31,19 @@
                                     <tr>
                                         <td>User level:</td>
                                         <td>{{getRole}}</td>
+                                        <td>{{#if isInRole 'admin'}}<button type="button" class="btn btn-primary">Change</button>{{/if}}</td>
                                     </tr>
                                     <tr>
                                         <td>Registered since:</td>
                                         <td>{{createdAtFormatted}}</td>
                                     </tr>
                                     <tr>
-                                        <td>Topics</td>
-                                        <td>15</td>
+                                        <td>Number of Comments:</td>
+                                        <td>{{comments}}</td>
                                     </tr>
                                     <tr>
-                                        <td>Warnings</td>
-                                        <td>0</td>
+                                        <td>Posts</td>
+                                        <td>{{posts}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -57,7 +58,7 @@
                             <button class="btn btn-warning" type="button"
                                     data-toggle="tooltip"
                                     data-original-title="Edit this user"><i class="icon-edit icon-white"></i></button>
-                            <button class="btn btn-danger" type="button"
+                            <button class="btn btn-danger delete-link" type="button"
                                     data-toggle="tooltip"
                                     data-original-title="Remove this user"><i class="icon-remove icon-white"></i></button>
                         </span>

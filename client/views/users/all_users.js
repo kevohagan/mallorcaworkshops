@@ -16,6 +16,10 @@ Template.all_users.helpers({
   },
   filterBy: function (parameter) {
     return "?filterBy="+parameter+"&sortBy="+this.sortBy;
+  },
+
+  numberOfUsers : function() {
+    return Meteor.users.find().count();
   }
 });
 
@@ -48,11 +52,11 @@ Template.all_users.rendered = function () {
         });
 
 
-        $('[data-toggle="tooltip"]').tooltip();
+        // $('[data-toggle="tooltip"]').tooltip();
 
-        $('button').click(function(e) {
-            e.preventDefault();
-            alert("This is a demo.\n :-)");
-        });
+        // $('button').click(function(e) {
+        //     e.preventDefault();
+        //     alert("This is a demo.\n :-)");
+        // });
     });
 };

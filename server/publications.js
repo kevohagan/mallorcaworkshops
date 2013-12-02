@@ -45,3 +45,15 @@ Meteor.publish('settings', function() {
   }
   return Settings.find({}, options);
 });
+
+
+
+// -------------------------------------------- Categories -------------------------------------------- //
+
+
+Meteor.publish('categories', function() {
+  if(canViewById(this.userId)){
+    return Categories.find();
+  }
+  return [];
+});

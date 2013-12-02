@@ -2,7 +2,10 @@
 <br>
 <br>
   <div class="container">
-    <div class="well col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+    <div class="well col-lg-8 col-lg-offset-2">
+      <h4>There are {{numberOfUsers}} users in MallorcaWorkshops</h4>
+    </div>
+    <div class="well col-lg-8 col-lg-offset-2">
       {{#each users}}
         {{> user_item}}
       {{/each}}

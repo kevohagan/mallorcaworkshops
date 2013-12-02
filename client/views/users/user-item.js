@@ -12,7 +12,7 @@ Template.user_item.helpers({
     return getEmail(this);
   },
   posts: function(){
-    return Posts.find({'userId':this._id});
+    return Post.find({'userId':this._id});
   },
   comments: function(){
     return Comments.find({'userId':this._id});
@@ -31,10 +31,7 @@ Template.user_item.helpers({
     return getProfileUrl(user);
   },
   getRole : function() {
-    // return "admin";
-    // return Roles.find({'userId':this._id});
-    return this.roles[0];
-    console.log(this);
+    return this.roles;
   }
 });
 
@@ -69,7 +66,7 @@ Template.user_item.events({
   },
   'click .delete-link': function(e, instance){
     e.preventDefault();
-    if(confirm(i18n.t("Are you sure you want to delete ")+getDisplayName(instance.data)+"?"))
+    if(confirm("Are you sure you want to delete "+getDisplayName(instance.data)+"?"))
       Meteor.users.remove(instance.data._id);
   }
 })

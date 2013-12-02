@@ -2,7 +2,7 @@
 Session.set('initialLoad', true);
 Session.set('today', new Date());
 Session.set('view', 'top');
-Session.set('postsLimit', getSetting('postsPerPage', 10));
+// Session.set('postsLimit', getSetting('postsPerPage', 10));
 Session.set('settingsLoaded', false);
 Session.set('sessionId', Meteor.default_connection._lastSessionId);
 
@@ -21,6 +21,8 @@ Meteor.subscribe('settings', function(){
 
 // Categories
 Meteor.subscribe('categories');
+Meteor.subscribe('Post');
+// Meteor.subscribe('Authors');
 
 // Current User
 // We need to subscribe to the currentUser subscription because by itself,

@@ -105,7 +105,7 @@ var filters = {
 
 }
 
-Router.before(filters.userIsAdmin, {only: ['admin']});
+Router.before(filters.userIsAdmin, {only: ['admin','categories']});
 Router.before(filters.isLoggedIn,{except: ['home','entrySignIn','entrySignUp','entryResetPassword','entryForgotPassword','blogIndex','blogShow']});
 
 
@@ -133,6 +133,7 @@ Router.map(function() {
   });
 
   this.route('admin');
+  this.route('categories');
 
 
 
