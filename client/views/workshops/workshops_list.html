@@ -1,0 +1,10 @@
+<template name="workshops_list">
+<div class="container">
+    <div class="row">
+    <h2>{{workshopCount}} Workshops</h2>
+    {{#each workshops}}
+      {{> workshop_item}}
+    {{/each}}
+</div>
+
+</template>

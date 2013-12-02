@@ -42,21 +42,14 @@ Template.all_users.rendered = function () {
                 //Completed slidetoggle
                 if(idFor.is(':visible'))
                 {
-                    currentButton.html('<i class="icon-chevron-up text-muted"></i>');
+                    currentButton.html('<i class="fa fa-angle-up fa-2x"></i>');
                 }
                 else
                 {
-                    currentButton.html('<i class="icon-chevron-down text-muted"></i>');
+                    currentButton.html('<i class="fa fa-angle-down fa-2x"></i>');
                 }
             })
         });
 
-
-        // $('[data-toggle="tooltip"]').tooltip();
-
-        // $('button').click(function(e) {
-        //     e.preventDefault();
-        //     alert("This is a demo.\n :-)");
-        // });
     });
 };

@@ -21,8 +21,8 @@ Meteor.subscribe('settings', function(){
 
 // Categories
 Meteor.subscribe('categories');
-Meteor.subscribe('Post');
-// Meteor.subscribe('Authors');
+Meteor.subscribe('posts');
+Meteor.subscribe('workshops');
 
 // Current User
 // We need to subscribe to the currentUser subscription because by itself,

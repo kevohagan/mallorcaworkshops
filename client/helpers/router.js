@@ -134,6 +134,14 @@ Router.map(function() {
 
   this.route('admin');
   this.route('categories');
+  this.route('contact');
+  this.route('workshops',{
+    path:'/workshops',
+    template:'workshops_list',
+    data: function() {
+      return Workshops.find().fetch();
+    }
+  });
 
 
 
@@ -167,3 +175,32 @@ Router.map(function() {
 
 
 });
+
+
+
+
+
+
+//------------------------------------------- Controllers ------------------------------------------//
+//--------------------------------------------------------------------------------------------------//
+
+
+// Controller for all posts lists
+
+// WorkshopsListController = RouteController.extend({
+//   template:'workshops_list',
+//   waitOn: function () {
+//     return Meteor.subscribe('workshops');
+//      },
+//   data: function () {
+//       var workshops = Workshops.find();
+//         workshopsCount = workshops.count();
+
+//     return {
+//       workshopslist: workshops,
+//       workshopsCount: workshopsCount
+//     }
+//   }
+
+// });
+

@@ -10,7 +10,8 @@
       "roles": {},
       "nprogress": {},
       "medium-editor": {},
-      "impicker": {}
+      "impicker": {},
+      "collection2": {}
     },
     "packages": {
       "iron-router": {
@@ -58,6 +59,11 @@
         "tag": "v1.1.2",
         "commit": "26f1b4a6ed8f90762c699ad845264ff1065e8ebb"
       },
+      "collection2": {
+        "git": "https://github.com/aldeed/meteor-collection2.git",
+        "tag": "v0.2.14",
+        "commit": "46eeef2c8786f55e3ff3368c99ac0672600bc734"
+      },
       "parsleyjs": {
         "git": "https://github.com/nate-strauser/meteor-parsleyjs.git",
         "tag": "v1.1.7",
@@ -82,6 +88,11 @@
         "git": "https://github.com/oortcloud/meteor-crypto-md5.git",
         "tag": "v3.1.2.2",
         "commit": "75bbb3eeace302122d3554a6212a6fe92553fa18"
+      },
+      "simple-schema": {
+        "git": "https://github.com/aldeed/meteor-simple-schema.git",
+        "tag": "v0.2.19",
+        "commit": "99f975da6276e352ab9208eaaad907a2f0a8851f"
       },
       "underscore-string-latest": {
         "git": "https://github.com/TimHeckel/meteor-underscore-string.git",

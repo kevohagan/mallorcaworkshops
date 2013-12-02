@@ -57,3 +57,13 @@ Meteor.publish('categories', function() {
   }
   return [];
 });
+
+
+
+
+// -------------------------------------------- Workshops -------------------------------------------- //
+
+
+Meteor.publish('workshops', function(){
+  return Workshops.find();
+});

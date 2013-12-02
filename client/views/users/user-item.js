@@ -52,7 +52,7 @@ Template.user_item.events({
     e.preventDefault();
     Meteor.users.update(instance.data._id,{
       $set:{
-        roles: "admin, user"
+        roles: "admin"
       }
     });
   },
@@ -70,3 +70,4 @@ Template.user_item.events({
       Meteor.users.remove(instance.data._id);
   }
 })
+
