@@ -52,7 +52,7 @@ Template.user_item.events({
     e.preventDefault();
     Meteor.users.update(instance.data._id,{
       $set:{
-        isAdmin: true
+        roles: "admin, user"
       }
     });
   },
@@ -60,7 +60,7 @@ Template.user_item.events({
     e.preventDefault();
     Meteor.users.update(instance.data._id,{
       $set:{
-        isAdmin: false
+        roles: "user"
       }
     });
   },
