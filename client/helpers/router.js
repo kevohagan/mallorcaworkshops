@@ -187,7 +187,10 @@ Router.map(function() {
 
   this.route('new_workshop', {
     path:'/admin/new_workshop',
-    template:'new_workshop'
+    template:'new_workshop',
+    data: function() {
+      return Workshops.find();
+    }
   });
 
 
