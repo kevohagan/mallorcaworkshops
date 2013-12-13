@@ -47,3 +47,6 @@ if(Meteor.user() != null)
 STATUS_PENDING=1;
 STATUS_APPROVED=2;
 STATUS_REJECTED=3;
+
+
+
