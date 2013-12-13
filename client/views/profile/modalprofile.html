@@ -9,10 +9,11 @@
                   <h4 class="modal-title" id="myModalLabel">Edit Profile</h4>
                 </div>
                 <div class="modal-body">
-                 <div class="form-group">
+                    <div class="form-group">
                       <input class="form-control" type="email" id="email" placeholder="Email" value="{{email}}"></input>
                       <span class='errors'></span>
                     </div>
+
                     <div class="form-group">
                       <input class="form-control" type="text" id="firstName" placeholder="First Name" value="{{firstName}}"></input>
                       <span class='errors'></span>
@@ -40,7 +41,9 @@
                     <div class="form-group">
                       <input class="form-control" type="text" id="twitterHandle" placeholder="Twitter Handle (optional)" value="{{twitterHandle}}"></input>
                     </div>
-                    <!-- <a class='btn btn-primary done'><i class='icon-ok'></i> done</a> -->
+                    <div class="form-group">
+                      <span class='errors'></span>
+                    </div>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

@@ -31,12 +31,12 @@ Accounts.onCreateUser(function(options, user){
   user.slug = slugify(getUserName(user));
 
   // if this is the first user ever, make them an admin
-  // if (!Meteor.users.find().count() )
-  //   user.isAdmin = true;
-
+  if (!Meteor.users.find().count() ){
+    user.roles = 'admin';
+  } else {
   //create roles for user
-
   user.roles = "user";
+  }
 
 
   // give new users a few invites (default to 3)
@@ -129,5 +129,8 @@ Meteor.methods({
   },
   addCurrentUserToMailChimpList: function(){
     addToMailChimpList(Meteor.user());
+  },
+  addProfileImg: function(url) {
+    addProfileImg(Meteor.user(), url);
   }
 });

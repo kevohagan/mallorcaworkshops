@@ -1,0 +1,46 @@
+<template name="new_workshop">
+  <div class="container">
+    {{#autoForm schema=workshops id="insertWorkshopForm"}}
+      <fieldset>
+        <legend>Add a Workshop</legend>
+        <div class="form-group{{#if afFieldIsInvalid 'title'}} has-error{{/if}}">
+            {{afFieldLabel 'title'}}
+            {{afFieldInput 'title'}}
+            {{#if afFieldIsInvalid 'title'}}
+            <span class="help-block">{{afFieldMessage 'title'}}</span>
+            {{/if}}
+        </div>
+        <div class="form-group{{#if afFieldIsInvalid 'description'}} has-error{{/if}}">
+            {{afFieldLabel 'description'}}
+            {{afFieldInput 'description'}}
+            {{#if afFieldIsInvalid 'description'}}
+            <span class="help-block">{{afFieldMessage 'description'}}</span>
+            {{/if}}
+        </div>
+        <div class="form-group{{#if afFieldIsInvalid 'start_date'}} has-error{{/if}}">
+            {{afFieldLabel 'start_date'}}
+            {{afFieldInput 'start_date'}}
+            {{#if afFieldIsInvalid 'start_date'}}
+            <span class="help-block">{{afFieldMessage 'start_date'}}</span>
+            {{/if}}
+        </div>
+        <div class="form-group{{#if afFieldIsInvalid 'end_date'}} has-error{{/if}}">
+            {{afFieldLabel 'end_date'}}
+            {{afFieldInput 'end_date'}}
+            {{#if afFieldIsInvalid 'end_date'}}
+            <span class="help-block">{{afFieldMessage 'end_date'}}</span>
+            {{/if}}
+        </div>
+        <div class="form-group{{#if afFieldIsInvalid 'capacity'}} has-error{{/if}}">
+            {{afFieldLabel 'capacity'}}
+            {{afFieldInput 'capacity'}}
+            {{#if afFieldIsInvalid 'capacity'}}
+            <span class="help-block">{{afFieldMessage 'capacity'}}</span>
+            {{/if}}
+        </div>
+
+      </fieldset>
+      <button type="submit" class="btn btn-primary insert">Insert</button>
+    {{/autoForm}}
+  </div>
+</template>

@@ -2,41 +2,52 @@ Workshops = new Meteor.Collection2("workshops", {
     schema: {
         title: {
             type: String,
-            label: "Title",
+            label: "title",
             max: 200
         },
-        author: {
+        description: {
             type: String,
-            label: "Author",
-            optional: true
+            label: "description",
         },
-        students: {
-            type: Number,
-            label: "Number of students",
-            min: 0,
-            optional: true
-        },
-        location: {
-            type: String,
-            label: "Location of the workshop",
-            optional: true
-        },
-        startDate: {
+        start_date: {
             type: Date,
             label: "Beginning of the workshop",
             optional: true
         },
-        endDate: {
+        end_date: {
             type: Date,
             label: "End of the workshop",
             optional: true
         },
-        summary: {
+        privacy: {
+            type: Number,
+            label:"Private/Public",
+            optional: true
+        },
+        capacity: {
+            type: Number,
+            label: "Capacity",
+            min: 0,
+            optional: true
+        },
+        venue_id: {
+            type: Number,
+            label: "venue_id",
+            optional:true
+        },
+        organizer_id:{
+            type: Number,
+            label: "organizer_id",
+            optional:true
+
+        },
+        currency:{
             type: String,
-            label: "Brief summary",
-            optional: true,
-            max: 1000
+            label: "currency",
+            optional:true
+
         }
+
     }
 });
 
@@ -45,4 +56,7 @@ Workshops.allow({
   insert: isAdminById
 , update: isAdminById
 , remove: isAdminById
+, fetch: []
 });
+
+

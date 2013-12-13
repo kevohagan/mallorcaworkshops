@@ -17,5 +17,7 @@ gravatar
 crypto-base
 roles
 nprogress
-impicker
 collection2
+filepicker
+npm
+autoform

@@ -1,6 +1,10 @@
 Template.user_item.helpers({
   avatarUrl: function(){
-    return getAvatarUrl(this);
+        if(!this.profile.profileImg){
+          return getAvatarUrl(this);
+        } else {
+          return this.profile.profileImg ;
+        }
   },
   createdAtFormatted: function(){
     return this.createdAt ? moment(this.createdAt).fromNow() : '–';

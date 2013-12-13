@@ -8,7 +8,9 @@
     "roles": {},
     "nprogress": {},
     "medium-editor": {},
-    "impicker": {},
-    "collection2": {}
+    "collection2": {},
+    "filepicker": {},
+    "npm": {},
+    "autoform": {}
   }
 }

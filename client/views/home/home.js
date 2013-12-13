@@ -6,3 +6,9 @@
 
   */
 
+
+Template.home.rendered = function () {
+  $('#myCarousel').carousel({
+  interval: 10000
+})
+};

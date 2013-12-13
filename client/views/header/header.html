@@ -17,7 +17,6 @@
           <ul class="nav navbar-nav navbar-right">
            <li><a href=" {{pathFor 'workshops'}} ">Workshops</a></li>
            <li><a href=" {{pathFor 'blogIndex'}} ">Blog</a></li>
-           <li><a href=" {{pathFor 'categories'}} ">Categories</a></li>
            <li><a href=" {{pathFor 'contact'}} ">Contact</a></li>
            {{accountButtons}}
            {{#if isInRole 'admin'}} {{>admin_nav}} {{/if}}
@@ -33,8 +32,9 @@
                     class="fa fa-user"></i>Admin <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="#"><span class="fa fa-wrench"></span>Profile</a></li>
-                         <li><a href=" {{pathFor 'all-users'}} ">All Users</a></li>
-                        <li><a href="#"><span class="fa fa-sitemap"></span>Settings</a></li>
+                        <li><a href=" {{pathFor 'all-users'}} ">All Users</a></li>
+                        <li><a href=" {{pathFor 'categories'}} ">Categories</a></li>
+                        <li><a href="{{pathFor 'new_workshop'}}"><span class="fa fa-sitemap"></span>New Workshop</a></li>
                         <li class="divider"></li>
                     </ul>
                 </li>

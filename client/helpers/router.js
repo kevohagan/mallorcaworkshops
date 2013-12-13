@@ -105,8 +105,8 @@ var filters = {
 
 }
 
-Router.before(filters.userIsAdmin, {only: ['admin','categories']});
-Router.before(filters.isLoggedIn,{except: ['home','entrySignIn','entrySignUp','entryResetPassword','entryForgotPassword','blogIndex','blogShow']});
+Router.before(filters.userIsAdmin, {only: ['admin','categories','new_workshop']});
+Router.before(filters.isLoggedIn,{except: ['home','entrySignIn','entrySignUp','entryResetPassword','entryForgotPassword','blogIndex','blogShow','workshops','contact']});
 
 
 
@@ -135,13 +135,7 @@ Router.map(function() {
   this.route('admin');
   this.route('categories');
   this.route('contact');
-  this.route('workshops',{
-    path:'/workshops',
-    template:'workshops_list',
-    data: function() {
-      return Workshops.find().fetch();
-    }
-  });
+
 
 
 
@@ -177,6 +171,27 @@ Router.map(function() {
 });
 
 
+//------------------------------------------- Workshops ------------------------------------------//
+//--------------------------------------------------------------------------------------------------//
+  Router.map(function () {
+    // ...
+
+
+  this.route('workshops',{
+    path:'/workshops',
+    template:'workshops_list',
+    data: function() {
+      return Workshops.find().fetch();
+    }
+  });
+
+  this.route('new_workshop', {
+    path:'/admin/new_workshop',
+    template:'new_workshop'
+  });
+
+
+  });
 
 
 

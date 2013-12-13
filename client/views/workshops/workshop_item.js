@@ -2,16 +2,16 @@ Template.workshop_item.helpers({
   title: function () {
    return this.title;
   },
-  author: function() {
-    return this.author;
+  capacity: function() {
+    return this.capacity;
   },
-  startDate: function(){
-    return this.startDate;
+  start_date: function(){
+    return this.start_date;
   },
-  endDate: function(){
-    return this.endDate;
+  end_date: function(){
+    return this.end_date;
   },
-  students: function(){
-    return this.students;
+  description: function () {
+    return this.description;
   }
 });

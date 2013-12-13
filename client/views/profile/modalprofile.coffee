@@ -1,39 +1,3 @@
-
-
-Template.modalprofile.helpers
-  email: ->
-    if Meteor.user().emails?
-      Meteor.user().emails[0].address
-
-  firstName: ->
-    Meteor.user().profile.firstName
-
-  lastName: ->
-    Meteor.user().profile.lastName
-
-  organization: ->
-    Meteor.user().profile.organization
-
-  location: ->
-    Meteor.user().profile.location
-
-  bio: ->
-    Meteor.user().profile.bio
-
-  url: ->
-    Meteor.user().profile.url
-
-  googlePlusUrl: ->
-    Meteor.user().profile.googlePlusUrl
-
-  twitterHandle: ->
-    Meteor.user().profile.twitterHandle
-
-  gravatarimg: ->
-    Meteor.user().emails[0].address
-
-
-
 Template.modalprofile.events
 
   'click .done': ->
@@ -67,7 +31,37 @@ Template.modalprofile.events
 
 
 
-Template.profile.events
 
-  'click #modalButton': ->
-      Session.set('isModalProfile', true)
+
+
+Template.modalprofile.helpers
+  email: ->
+    if Meteor.user().emails?
+      Meteor.user().emails[0].address
+
+  firstName: ->
+    Meteor.user().profile.firstName
+
+  lastName: ->
+    Meteor.user().profile.lastName
+
+  organization: ->
+    Meteor.user().profile.organization
+
+  location: ->
+    Meteor.user().profile.location
+
+  bio: ->
+    Meteor.user().profile.bio
+
+  url: ->
+    Meteor.user().profile.url
+
+  googlePlusUrl: ->
+    Meteor.user().profile.googlePlusUrl
+
+  twitterHandle: ->
+    Meteor.user().profile.twitterHandle
+
+  gravatarimg: ->
+    Meteor.user().emails[0].address

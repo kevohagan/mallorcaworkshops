@@ -24,8 +24,8 @@ Template.all_users.helpers({
 });
 
 Template.all_users.rendered = function () {
-  // ...
-      $(document).ready(function() {
+
+        $(document).ready(function() {
         var panels = $('.user-infos');
         var panelsButton = $('.dropdown-user');
         panels.hide();
@@ -53,3 +53,6 @@ Template.all_users.rendered = function () {
 
     });
 };
+
+
+

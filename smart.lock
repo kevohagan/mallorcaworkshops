@@ -10,8 +10,10 @@
       "roles": {},
       "nprogress": {},
       "medium-editor": {},
-      "impicker": {},
-      "collection2": {}
+      "collection2": {},
+      "filepicker": {},
+      "npm": {},
+      "autoform": {}
     },
     "packages": {
       "iron-router": {
@@ -26,8 +28,8 @@
       },
       "blog": {
         "git": "https://github.com/BeDifferential/meteor-blog.git",
-        "tag": "v0.2.2",
-        "commit": "9c9a88e8ccc0dbce72762fea1dcfc56e6af0122b"
+        "tag": "v0.2.3",
+        "commit": "9a492c6a0aebb1ce26624bfe723b3808011a59a9"
       },
       "handlebar-helpers": {
         "git": "https://github.com/raix/Meteor-handlebar-helpers.git",
@@ -41,8 +43,8 @@
       },
       "roles": {
         "git": "https://github.com/alanning/meteor-roles.git",
-        "tag": "v1.0.6",
-        "commit": "f81cbf7c765a4ed7e16a580c288db6f10a90856b"
+        "tag": "v1.2.0",
+        "commit": "565ed93b9a532dd7171651f23cfb5d7c81b57498"
       },
       "nprogress": {
         "git": "https://github.com/zhouzhuojie/meteor-nprogress.git",
@@ -54,15 +56,25 @@
         "tag": "v1.1.2",
         "commit": "46bc982ba7824b4ecdb67b13ff6c54f9e96963cd"
       },
-      "impicker": {
-        "git": "https://github.com/wulx/impicker.git",
-        "tag": "v1.1.2",
-        "commit": "26f1b4a6ed8f90762c699ad845264ff1065e8ebb"
-      },
       "collection2": {
         "git": "https://github.com/aldeed/meteor-collection2.git",
-        "tag": "v0.2.14",
-        "commit": "46eeef2c8786f55e3ff3368c99ac0672600bc734"
+        "tag": "v0.2.15",
+        "commit": "0fe469aa0c01eda0563c8802e17914307960de79"
+      },
+      "filepicker": {
+        "git": "https://github.com/Ink/meteor.git",
+        "tag": "v0.4.0",
+        "commit": "20d56aaaf48be3a5c0499547a495a6463b4fa3d9"
+      },
+      "npm": {
+        "git": "https://github.com/arunoda/meteor-npm.git",
+        "tag": "v0.2.6",
+        "commit": "177ab6118de5bf8cffb19481343d5762ff7a2aaf"
+      },
+      "autoform": {
+        "git": "https://github.com/aldeed/meteor-autoform.git",
+        "tag": "v0.4.4",
+        "commit": "ccc1e559b5d81dea7d22f5831bde8db4105ba71c"
       },
       "parsleyjs": {
         "git": "https://github.com/nate-strauser/meteor-parsleyjs.git",
@@ -91,8 +103,8 @@
       },
       "simple-schema": {
         "git": "https://github.com/aldeed/meteor-simple-schema.git",
-        "tag": "v0.2.19",
-        "commit": "99f975da6276e352ab9208eaaad907a2f0a8851f"
+        "tag": "v0.2.23",
+        "commit": "ccdb1244ae3a38c70f53e04a2d68879ca89a4f9f"
       },
       "underscore-string-latest": {
         "git": "https://github.com/TimHeckel/meteor-underscore-string.git",

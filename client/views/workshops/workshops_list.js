@@ -6,3 +6,10 @@ Template.workshops_list.helpers({
     return Workshops.find();
   }
 });
+
+
+
+Template.workshops_list.rendered = function () {
+
+
+};

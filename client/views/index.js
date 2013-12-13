@@ -6,6 +6,14 @@ Session.set('view', 'top');
 Session.set('settingsLoaded', false);
 Session.set('sessionId', Meteor.default_connection._lastSessionId);
 
+
+//Filepicker Stuff
+Session.set('img_profile_uploaded', false);
+Session.set("widgetSet", false);
+
+
+
+
 // Subscriptions
 
 // note: here we only subscribe to subscriptions that we need to be available all the time.
