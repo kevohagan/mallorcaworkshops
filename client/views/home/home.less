@@ -3,10 +3,47 @@
 
 // General
 
+@import url('http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300,200');
+
+@font-corporativa:'Yanone Kaffeesatz', Arial, Arial, sans-serif;
+@base-font-size:16px;
+@color-corporativo:#ffd455;
 
 
+body{
+ font-size: 1.3em;
+ 
+}
 
+body{
+	background-color: @color-corporativo;
+}
 
+.navbar-inverse {
+background-color: transparent !important;
+border: none;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+color: black;
+}
+
+.navbar-inverse .navbar-brand {
+color: @color-corporativo;
+}
+
+h3{
+	color:white;
+}
+
+.carousel {
+height: 70%;
+margin-top: -50px;
+}
+
+.presentation .item{
+	text-align:center;
+}
 
 //svg class
 #bigGear{
@@ -21,4 +58,66 @@
   margin-right:auto;
 }
 .st0{fill:#FFD200;}
+
+.carousel-indicators > li {
+float:left;
+width: 130px;
+height: 50px;
+padding:5px;
+margin: 10px 6px 0px 6px;
+text-indent: 0px;
+cursor: pointer;
+background-color: @color-corporativo;
+border-radius:5px;
+border:none;
+color:#000;
+font-size:1.9em;
+font-family:@font-corporativa;
+
+.transition(margin-top 0.3s ease-in-out);
+
+//.box-shadow(0px 0px 3px 2px rgba(255,255,0,0.4));
+
+}
+
+.carousel-indicators li:hover{
+color:#999;
+margin: 0px 6px 0px 6px;
+}
+
+.section-colored {
+background-color: #fff;
+}
+
+.carousel-indicators .active {
+.transition(color 0.3s ease-in-out);
+color:#999;
+width: 130px;
+height: 50px;
+padding:5px;
+margin: 10px 6px 0px 6px;
+font-family:@font-corporativa;
+font-size:1.9em;
+
+background-color: @color-corporativo;
+//.box-shadow(0px 0px 3px 2px rgba(255,234,0,0.4));
+border:none;
+
+.transition(margin-top 0.3s ease-in-out);
+
+
+}
+
+.carousel-indicators{
+	bottom:-35px;
+}
+
+.carousel-caption {
+right: 20%;
+left: 20%;
+top: 30%;
+padding-bottom: 30px;
+}
+
+
 
